@@ -100,3 +100,4 @@ InitTestScene*.unity*
 
 # From user's gitignore
 /Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipelineResources/TextureXR/
+# Local agent instructions (do not track)`r`nAGENTS.md
