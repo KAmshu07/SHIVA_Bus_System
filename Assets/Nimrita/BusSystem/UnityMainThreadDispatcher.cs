@@ -39,9 +39,11 @@ public class UnityMainThreadDispatcher : MonoBehaviour
         }
     }
 
-    private static UnityMainThreadDispatcher FindExistingDispatcher()
+    private static UnityMainThreadDispatcher FindExistingDispatcher() 
     {
-#if UNITY_2020_1_OR_NEWER
+#if UNITY_2022_2_OR_NEWER
+        var existing = FindFirstObjectByType<UnityMainThreadDispatcher>(FindObjectsInactive.Include);
+#elif UNITY_2020_1_OR_NEWER
         var existing = FindObjectOfType<UnityMainThreadDispatcher>(true);
 #else
         var existing = FindObjectOfType<UnityMainThreadDispatcher>();
